@@ -1,0 +1,19 @@
+# 💱 Currency Convertor Web App
+
+This is a simple **Currency Convertor** web application built using Python and Flask (or Streamlit).
+
+It allows users to convert currency from one to another (e.g., USD to INR) using a fixed or live exchange rate.
+
+---
+
+## 🚀 Features
+
+- Real-time currency conversion (can be connected to an API)
+- Clean UI with input fields
+- Fast and responsive
+- Easy to deploy on the web (Render/Replit)
+
+---
+
+## 📁 Project Structure
+
