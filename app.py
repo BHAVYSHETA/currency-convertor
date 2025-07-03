@@ -55,5 +55,22 @@ def logout():
     return redirect(url_for("login"))
 
 
+from flask import Flask, render_template, request
+import os
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Currency Converter is Live!"
+
+# You can add more routes here
+
+# ⬇️ This part is ONLY needed if you're running with `python app.py`
+# But safe to include even with gunicorn — it won't hurt
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+
+
