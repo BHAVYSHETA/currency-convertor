@@ -61,16 +61,17 @@ import os
 app = Flask(__name__)
 
 @app.route("/")
+def login():
+    return render_template("login.html")  # ✅ This renders login.html
+
+@app.route("/home", methods=["POST"])
 def home():
-    return "Currency Converter is Live!"
+    return render_template("index.html")  # ✅ This renders index.html after login
 
-# You can add more routes here
-
-# ⬇️ This part is ONLY needed if you're running with `python app.py`
-# But safe to include even with gunicorn — it won't hurt
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
 
