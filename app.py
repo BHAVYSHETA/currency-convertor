@@ -66,7 +66,16 @@ def login():
 
 @app.route("/home", methods=["POST"])
 def home():
-    return render_template("index.html")  # ✅ This renders index.html after login
+    if 'user' in session:
+        return render_template('index.html')  # You must create index.html
+    else:
+        return redirect('/login')
+    
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect('/login')
+
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
