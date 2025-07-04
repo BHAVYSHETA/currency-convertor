@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import datetime
+import os
 
 app = Flask(__name__)
-app.secret_key = "secret123"  # Needed for session to work
+app.secret_key = "secret123"
 
+# Currency conversion rates
 conversion_rates = {
     "USD": 85.60, "AUD": 55.81, "CAD": 63.14, "EUR": 99.70, "GBP": 116.40,
     "AED": 23.40, "CNY": 11.986, "NZD": 51.70, "BRL": 15.50, "SGD": 67.07,
@@ -13,6 +15,7 @@ conversion_rates = {
     "TRY": 2.38, "THB": 2.53, "KPW": 0.10, "KRW": 0.06
 }
 
+# ---------------- Login Page ----------------
 @app.route("/", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -27,6 +30,7 @@ def login():
     return render_template("login.html")
 
 
+# ---------------- Dashboard Converter ----------------
 @app.route("/converter", methods=["GET", "POST"])
 def converter():
     if "user" not in session:
@@ -34,11 +38,14 @@ def converter():
     
     result = None
     if request.method == "POST":
-        amount = float(request.form["amount"])
-        currency = request.form["currency"]
-        rate = conversion_rates.get(currency)
-        if rate:
-            result = round(amount * rate, 2)
+        try:
+            amount = float(request.form["amount"])
+            currency = request.form["currency"]
+            rate = conversion_rates.get(currency)
+            if rate:
+                result = round(amount * rate, 2)
+        except:
+            result = "⚠️ Invalid input."
     
     return render_template(
         "index.html",
@@ -49,38 +56,14 @@ def converter():
     )
 
 
+# ---------------- Logout ----------------
 @app.route("/logout")
 def logout():
     session.clear()
     return redirect(url_for("login"))
 
 
-from flask import Flask, render_template, request
-import os
-
-app = Flask(__name__)
-
-@app.route("/")
-def login():
-    return render_template("login.html")  # ✅ This renders login.html
-
-@app.route("/home", methods=["POST"])
-def home():
-    if 'user' in session:
-        return render_template('index.html')  # You must create index.html
-    else:
-        return redirect('/login')
-    
-@app.route('/logout')
-def logout():
-    session.pop('user', None)
-    return redirect('/login')
-
-
+# ---------------- Main Runner ----------------
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
-
-
-
-
