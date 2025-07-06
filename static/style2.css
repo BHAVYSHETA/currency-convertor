@@ -1,13 +1,12 @@
 /* Gradient Background */
 body {
-    background: linear-gradient(to left, #51369c, #1310cc);
+    background: url("background1.jpeg") no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #746c6c;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
 }
 
 /* Glassmorphism Card */
