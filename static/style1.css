@@ -11,7 +11,7 @@ body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(22, 13, 13, 0.18);
-    color: white;
+    color: rgb(109, 103, 103);
 }
 
 input, select {
@@ -69,7 +69,7 @@ body {
 .login-btn {
   margin-top: -20px;
   background-color: #28a745;
-  color: white;
+  color: rgb(104, 100, 100);
   padding: 12px 25px;
   border: none;
   border-radius: 25px;
@@ -121,7 +121,7 @@ body {
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 30px;
-  color: white;
+  color: rgb(92, 88, 88);
 }
 
 .alert-success {

@@ -1,8 +1,8 @@
 /* Gradient Background */
 body {
-    background: linear-gradient(to left, #ff4e50, #f9d423);
+    background: linear-gradient(to left, #51369c, #1310cc);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
+    color: #746c6c;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -23,7 +23,7 @@ body {
 /* Form Fields */
 input.form-control,
 select.form-select {
-    background-color: #ffffff;
+    background-color: #5e5656;
     color: #000000;
     border: none;
     border-radius: 10px;
