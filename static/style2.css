@@ -1,6 +1,6 @@
 /* Gradient Background */
 body {
-    background: url("background1.jpeg") no-repeat center center fixed;
+    background: url("background.jpeg") no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
