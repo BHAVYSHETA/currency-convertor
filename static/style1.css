@@ -1,140 +1,117 @@
+/* ==== BACKGROUND + BASE ==== */
 body {
-          background: url("background.jpeg") no-repeat center center fixed;
+    background: url("background1.jpeg") no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    overflow: hidden;
 }
 
+/* ==== GLASS CARD ==== */
 .glass-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(236, 180, 180, 0.37);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(22, 13, 13, 0.18);
-    color: rgb(109, 103, 103);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 30px;
 }
 
+/* ==== INPUT & SELECT ==== */
 input, select {
     border-radius: 10px;
     border: none;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
+/* ==== SUCCESS ALERT ==== */
 .alert-success {
     font-size: 1.5rem;
     background-color: #0f5132;
     border: none;
 }
 
-/* ==== BACKGROUND ==== */
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
-  color: #fff;
-}
-
-.container {
-  position: relative;
-  z-index: 10;
-  padding-top: 100px;
-}
-
-/* ==== MONKEY HANGING ==== */
+/* ==== MONKEY ANIMATION ==== */
 .monkey-container {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .monkey-img {
-  width: 150px;
-  height: auto;
-  animation: swing 2s infinite ease-in-out;
+    width: 150px;
+    height: auto;
+    animation: swing 2s infinite ease-in-out;
 }
 
 @keyframes swing {
-  0% { transform: translateX(-50%) rotate(-10deg); }
-  50% { transform: translateX(-50%) rotate(10deg); }
-  100% { transform: translateX(-50%) rotate(-10deg); }
+    0% { transform: translateX(-50%) rotate(-10deg); }
+    50% { transform: translateX(-50%) rotate(10deg); }
+    100% { transform: translateX(-50%) rotate(-10deg); }
 }
 
-/* ==== LOGIN BUTTON STYLING ==== */
+/* ==== LOGIN BUTTON ==== */
 .login-btn {
-  margin-top: -20px;
-  background-color: #28a745;
-  color: rgb(104, 100, 100);
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  font-size: 18px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  z-index: 30;
+    margin-top: -20px;
+    background-color: #28a745;
+    color: #000;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 30;
 }
 
-/* ==== FALLING DOLLARS AND RUPEES ==== */
+/* ==== FALLING CURRENCIES ==== */
 .currency {
-  position: fixed;
-  font-size: 24px;
-  opacity: 0.8;
-  pointer-events: none;
-  z-index: 1;
-  animation: fall 5s linear infinite;
+    position: fixed;
+    font-size: 24px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+    animation: fall 5s linear infinite;
 }
 
 @keyframes fall {
-  0% {
-    top: -5%;
-    transform: translateY(0);
-  }
-  100% {
-    top: 110%;
-    transform: translateY(100vh);
-  }
+    0% {
+        top: -5%;
+        transform: translateY(0);
+    }
+    100% {
+        top: 110%;
+        transform: translateY(100vh);
+    }
 }
 
 .dollar {
-  color: #00ffcc;
-  left: 10%;
-  animation-delay: 0s;
+    color: #00ffcc;
+    left: 10%;
+    animation-delay: 0s;
+    text-shadow: 0 0 8px #00ffcc;
 }
 
 .rupee {
-  color: #ffd700;
-  right: 10%;
-  animation-delay: 1s;
-}
-
-/* ==== DASHBOARD CARD ==== */
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 30px;
-  color: rgb(92, 88, 88);
-}
-
-.alert-success {
-  font-size: 1.5rem;
-  background-color: #0f5132;
-  border: none;
+    color: #ffd700;
+    right: 10%;
+    animation-delay: 1s;
+    text-shadow: 0 0 8px #ffd700;
 }
 
 /* ==== HIDE SCROLLBAR ==== */
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
