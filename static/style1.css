@@ -18,24 +18,28 @@ body {
 
 /* ==== GLASS CARD ==== */
 .glass-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 50, 0.5); /* deep dark glass */
     border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(236, 180, 180, 0.37);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color:rgb(117, 19, 230);
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.4); /* glow */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    color: #00ffe1; /* neon blue-green text */
     padding: 30px;
 }
+
 
 /* ==== INPUT & SELECT ==== */
 input, select {
     border-radius: 10px;
     border: none;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #c512e9;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
+    box-shadow: 0 0 10px #00f2ff66;
+    outline: none;
 }
+
 
 /* ==== SUCCESS ALERT ==== */
 .alert-success {
@@ -70,17 +74,24 @@ input, select {
 
 /* ==== LOGIN BUTTON ==== */
 .login-btn {
-    margin-top: -20px;
-    background-color: #28a745;
-    color: #000;
+    margin-top: 20px;
+    background: linear-gradient(to right, #00f2ff, #007cf0);
+    color: #fff;
     padding: 12px 25px;
     border: none;
     border-radius: 25px;
     font-size: 18px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    box-shadow: 0 0 15px #00f2ff99;
     cursor: pointer;
-    z-index: 30;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00f2ff;
+}
+
 
 /* ==== FALLING CURRENCIES ==== */
 .currency {
