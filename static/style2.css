@@ -1,7 +1,6 @@
 /* ==== BASE LAYOUT ==== */
 body {
     background-image: url("/static/background.jpeg");
-    border-color: black;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -11,37 +10,38 @@ body {
     min-height: 100vh;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #c206e7;
+    color: #00ffe1;
     overflow-x: hidden;
-
 }
 
-/* ==== GLASS CARD (FOR DASHBOARD) ==== */
+/* ==== GLASS CARD ==== */
 .glass-card {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(0, 0, 50, 0.6); /* deep futuristic blue */
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
     padding: 30px;
-    color: #a09595;
+    color: #00f2ff;
 }
 
-/* ==== FORM INPUT STYLING ==== */
+/* ==== FORM INPUTS ==== */
 input.form-control,
 select.form-select {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #ad0cec;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: #ffffff;
     border: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
+    box-shadow: 0 0 10px #00f2ff55;
 }
 
 /* ==== HEADER TEXT ==== */
 h2, h3 {
     font-weight: bold;
-    text-shadow: 0 2px 8px rgba(0, 255, 255, 0.6);
+    color: #00f2ff;
+    text-shadow: 0 0 8px #00f2ff, 0 0 16px #0088ff;
 }
 
 /* ==== CURRENCY ICONS ==== */
@@ -52,7 +52,7 @@ h2, h3 {
     font-size: 2.5rem;
     color: #00ffd5;
     font-weight: bold;
-    text-shadow: 0 0 10px #00ffd5;
+    text-shadow: 0 0 12px #00ffd5;
 }
 
 .currency-right {
@@ -62,20 +62,25 @@ h2, h3 {
     font-size: 2.5rem;
     color: #ffee55;
     font-weight: bold;
-    text-shadow: 0 0 10px #ffee55;
+    text-shadow: 0 0 12px #ffee55;
 }
 
 /* ==== BUTTON ==== */
 .btn-success {
-    background-color: #0ddf81;
+    background: linear-gradient(to right, #00ffcc, #00b894);
     border: none;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(13, 223, 129, 0.5);
+    box-shadow: 0 0 15px #00ffccaa;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
 .btn-success:hover {
-    background-color: #0be278;
-    box-shadow: 0 0 20px #0be278;
+    background-color: #00ffcc;
+    box-shadow: 0 0 25px #00ffcc;
+    transform: scale(1.05);
 }
 
 /* ==== RESPONSIVE ==== */
