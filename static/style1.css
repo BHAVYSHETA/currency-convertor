@@ -1,6 +1,6 @@
 /* ==== BACKGROUND + BASE ==== */
 body {
-    background-image: url(background.jpeg);
+    background-image: url("image/background.jpeg");
     border-color: black;
     background-size: cover;
     background-position: center;
@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
+    color: #aa0cf3;
     overflow-x: hidden;
 
 }
