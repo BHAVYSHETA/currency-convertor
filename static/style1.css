@@ -1,6 +1,6 @@
 /* ==== BACKGROUND + BASE ==== */
 body {
-    background-image: url("image/background.jpeg");
+    background-image: url("/static/background.jpeg");
     border-color: black;
     background-size: cover;
     background-position: center;
