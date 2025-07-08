@@ -1,7 +1,7 @@
 /* ==== BASE LAYOUT ==== */
 body {
     body {
-    background: url("pictures/background.jpeg") no-repeat center center fixed;
+    background: url("background.jpeg") no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #7e0aeb;
@@ -29,7 +29,7 @@ body {
 input.form-control,
 select.form-select {
     background-color: rgba(255, 255, 255, 0.15);
-    color: #cfcbcb;
+    color: #ad0cec;
     border: none;
     border-radius: 10px;
     padding: 10px;

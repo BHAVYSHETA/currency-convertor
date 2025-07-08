@@ -1,7 +1,7 @@
 /* ==== BACKGROUND + BASE ==== */
 body {
       body {
-    background: url("pictures/background.jpeg") no-repeat center center fixed;
+    background: url("background.jpeg") no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #8907aa;
@@ -21,7 +21,7 @@ body {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+    color:rgb(117, 19, 230);
     padding: 30px;
 }
 
@@ -31,7 +31,7 @@ input, select {
     border: none;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #c512e9;
 }
 
 /* ==== SUCCESS ALERT ==== */
