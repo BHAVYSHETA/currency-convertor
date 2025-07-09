@@ -94,3 +94,66 @@ h2, h3 {
         padding: 1rem;
     }
 }
+ 
+/* ==== FALLING CURRENCY ANIMATION ==== */
+.currency {
+    position: fixed;
+    font-size: 28px;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
+    animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        transform: translateY(0);
+    }
+    100% {
+        top: 110%;
+        transform: translateY(100vh);
+    }
+}
+
+.currency.dollar {
+    color: #00ffcc;
+    left: 10%;
+    animation-delay: 0s;
+    text-shadow: 0 0 8px #00ffcc, 0 0 15px #00ffcc;
+}
+
+.currency.rupee {
+    color: #ffd700;
+    right: 10%;
+    animation-delay: 1s;
+    text-shadow: 0 0 8px #ffd700, 0 0 15px #ffd700;
+}
+
+.currency.bitcoin {
+    color: #f7931a;
+    left: 20%;
+    animation-delay: 2s;
+    text-shadow: 0 0 8px #f7931a, 0 0 15px #f7931a;
+}
+
+.currency.euro {
+    color: #3b9cff;
+    left: 30%;
+    animation-delay: 3s;
+    text-shadow: 0 0 8px #3b9cff, 0 0 15px #3b9cff;
+}
+
+.currency.yen {
+    color: #7cf0ff;
+    left: 40%;
+    animation-delay: 4s;
+    text-shadow: 0 0 8px #7cf0ff, 0 0 15px #7cf0ff;
+}
+
+.currency.pound {
+    color: #ffffff;
+    left: 50%;
+    animation-delay: 5s;
+    text-shadow: 0 0 8px #ffffff, 0 0 15px #ffffff;
+}
