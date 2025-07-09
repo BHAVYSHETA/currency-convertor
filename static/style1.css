@@ -1,6 +1,6 @@
-/* ==== BACKGROUND + BASE ==== */
+/* ==== BACKGROUND ==== */
 body {
-    background-image: url("/static/background.jpeg");
+    background-image: url("/static/3792ed9f-eb8f-4b9b-90db-7f8d758a9f41.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -31,7 +31,7 @@ body {
     z-index: 10;
 }
 
-/* ==== FORM STYLING ==== */
+/* ==== FORM ==== */
 .glass-card form {
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ body {
     color: #ccf8ff;
 }
 
-/* ==== INPUT & SELECT ==== */
+/* ==== INPUTS ==== */
 input, select {
     border-radius: 12px;
     border: none;
@@ -53,15 +53,6 @@ input, select {
     box-shadow: 0 0 12px #00f2ff99;
     outline: none;
     font-size: 16px;
-}
-
-/* ==== SUCCESS ALERT ==== */
-.alert-success {
-    font-size: 1.2rem;
-    background-color: #198754;
-    color: #ffffff;
-    border: none;
-    text-align: center;
 }
 
 /* ==== LOGIN BUTTON ==== */
@@ -84,7 +75,26 @@ input, select {
     box-shadow: 0 0 25px #00f2ff;
 }
 
-/* ==== FALLING CURRENCIES ==== */
+/* ==== STATIC SYMBOLS ==== */
+.currency-static-left,
+.currency-static-right {
+    position: fixed;
+    top: 40%;
+    font-size: 2rem;
+    z-index: 3;
+}
+
+.currency-static-left {
+    left: 10px;
+    color: #00ffe1;
+}
+
+.currency-static-right {
+    right: 10px;
+    color: #ffd700;
+}
+
+/* ==== FALLING CURRENCY ==== */
 .currency {
     position: fixed;
     font-size: 28px;
@@ -119,7 +129,35 @@ input, select {
     text-shadow: 0 0 8px #ffd700, 0 0 15px #ffd700;
 }
 
-/* ==== HIDE SCROLLBAR ==== */
+.bitcoin {
+    color: #f7931a;
+    left: 15%;
+    animation-delay: 2s;
+    text-shadow: 0 0 8px #f7931a, 0 0 15px #f7931a;
+}
+
+.euro {
+    color: #3b9cff;
+    left: 25%;
+    animation-delay: 3s;
+    text-shadow: 0 0 8px #3b9cff, 0 0 15px #3b9cff;
+}
+
+.yen {
+    color: #7cf0ff;
+    left: 35%;
+    animation-delay: 4s;
+    text-shadow: 0 0 8px #7cf0ff, 0 0 15px #7cf0ff;
+}
+
+.pound {
+    color: #8fd7ff;
+    left: 45%;
+    animation-delay: 5s;
+    text-shadow: 0 0 8px #8fd7ff, 0 0 15px #8fd7ff;
+}
+
+/* ==== SCROLLBAR HIDDEN ==== */
 ::-webkit-scrollbar {
     display: none;
 }
