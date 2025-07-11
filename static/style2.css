@@ -30,7 +30,7 @@ body {
 input.form-control,
 select.form-select {
     background-color: rgba(255, 255, 255, 0.07);
-    color: #726e6e;
+    color: #4b4848;
     border: none;
     border-radius: 10px;
     padding: 12px;
