@@ -1,3 +1,4 @@
+from flask import send_from_directory
 from flask import Flask, render_template, request, redirect, url_for, session
 from datetime import datetime
 import os
@@ -72,3 +73,7 @@ if __name__ == "__main__":
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("login.html"), 404
+
+@app.route('/google902b615e57984f03.html')
+def google_verification():
+    return send_from_directory('static', 'google902b615e57984f03.html')
