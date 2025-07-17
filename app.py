@@ -77,3 +77,9 @@ def page_not_found(e):
 @app.route('/google902b615e57984f03.html')
 def google_verification():
     return send_from_directory('static', 'google902b615e57984f03.html')
+
+from flask import send_from_directory
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('.', 'sitemap.xml')
