@@ -5,7 +5,7 @@ import os
 import requests
 
 # Your API key (replace with your real one)
-url = f"https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD"
+url = f"https://app.exchangerate-api.com/activate/5e8e6f4ce44d39251428827334"
 
 app = Flask(__name__)
 app.secret_key = "secret123"
