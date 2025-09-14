@@ -34,11 +34,11 @@ def converter():
     result = None
     conversion_rates = {}
 
-    # 🔥 Fetch live conversion rates from API
+    
     try:
         response = requests.get(url)
         data = response.json()
-        conversion_rates = data["conversion_rates"]   # dict like {"INR": 85.0, "EUR": 0.92, ...}
+        conversion_rates = data["conversion_rates"]  
     except:
         return "⚠️ Error fetching live currency data."
 
